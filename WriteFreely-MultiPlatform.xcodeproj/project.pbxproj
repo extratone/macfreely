@@ -136,6 +136,8 @@
 		17DFDE8B251D309400A25F31 /* OpenSans-License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 17DFDE86251D309400A25F31 /* OpenSans-License.txt */; };
 		17DFDE8C251D309400A25F31 /* OpenSans-License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 17DFDE86251D309400A25F31 /* OpenSans-License.txt */; };
 		17E5DF8A2543610700DCDC9B /* PostTextEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5DF892543610700DCDC9B /* PostTextEditingView.swift */; };
+		32D2529229FF516E00EC1112 /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 32D2529129FF516E00EC1112 /* SwiftLintFramework */; };
+		32D2529429FF516E00EC1112 /* swiftlint in Frameworks */ = {isa = PBXBuildFile; productRef = 32D2529329FF516E00EC1112 /* swiftlint */; };
 		375A67E828FC555C007A1AC0 /* MultilineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375A67E728FC555C007A1AC0 /* MultilineTextView.swift */; };
 		3779389729EC0C880032D6C1 /* HelpCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779389629EC0C880032D6C1 /* HelpCommands.swift */; };
 /* End PBXBuildFile section */
@@ -286,6 +288,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32D2529229FF516E00EC1112 /* SwiftLintFramework in Frameworks */,
+				32D2529429FF516E00EC1112 /* swiftlint in Frameworks */,
 				1784D2ED27946D880033E72E /* WriteFreely in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,6 +674,8 @@
 			name = "WriteFreely-MultiPlatform (iOS)";
 			packageProductDependencies = (
 				1784D2EC27946D880033E72E /* WriteFreely */,
+				32D2529129FF516E00EC1112 /* SwiftLintFramework */,
+				32D2529329FF516E00EC1112 /* swiftlint */,
 			);
 			productName = "WriteFreely-MultiPlatform (iOS)";
 			productReference = 17DF328824C87D3500BCE2E3 /* WriteFreely-MultiPlatform.app */;
@@ -773,6 +779,7 @@
 			packageReferences = (
 				1784D2EB27946D880033E72E /* XCRemoteSwiftPackageReference "writefreely-swift" */,
 				17D4926327947B4D0035BD7E /* XCRemoteSwiftPackageReference "Sparkle" */,
+				32D2529029FF516E00EC1112 /* XCRemoteSwiftPackageReference "swiftlint" */,
 			);
 			productRefGroup = 17DF328924C87D3500BCE2E3 /* Products */;
 			projectDirPath = "";
@@ -1283,17 +1290,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 708;
-				DEVELOPMENT_TEAM = TPPAB4YBA6;
+				DEVELOPMENT_TEAM = JCH5W6VSL6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WriteFreely;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.abunchtell.WriteFreely-MultiPlatform";
+				PRODUCT_BUNDLE_IDENTIFIER = com.extratone.macfreely;
 				PRODUCT_NAME = "WriteFreely for Mac";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -1310,17 +1319,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 708;
-				DEVELOPMENT_TEAM = TPPAB4YBA6;
+				DEVELOPMENT_TEAM = JCH5W6VSL6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WriteFreely;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.abunchtell.WriteFreely-MultiPlatform";
+				PRODUCT_BUNDLE_IDENTIFIER = com.extratone.macfreely;
 				PRODUCT_NAME = "WriteFreely for Mac";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -1494,6 +1505,14 @@
 				minimumVersion = 2.3.0;
 			};
 		};
+		32D2529029FF516E00EC1112 /* XCRemoteSwiftPackageReference "swiftlint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/swiftlint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.51.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1516,6 +1535,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 17D4926327947B4D0035BD7E /* XCRemoteSwiftPackageReference "Sparkle" */;
 			productName = Sparkle;
+		};
+		32D2529129FF516E00EC1112 /* SwiftLintFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32D2529029FF516E00EC1112 /* XCRemoteSwiftPackageReference "swiftlint" */;
+			productName = SwiftLintFramework;
+		};
+		32D2529329FF516E00EC1112 /* swiftlint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32D2529029FF516E00EC1112 /* XCRemoteSwiftPackageReference "swiftlint" */;
+			productName = swiftlint;
 		};
 /* End XCSwiftPackageProductDependency section */
 
