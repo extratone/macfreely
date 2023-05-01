@@ -35,7 +35,7 @@
 		172E10012735B83E00061372 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 172E10002735B83E00061372 /* UniformTypeIdentifiers.framework */; platformFilter = maccatalyst; };
 		172E10042735B83E00061372 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172E10032735B83E00061372 /* Media.xcassets */; };
 		172E10062735B83E00061372 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E10052735B83E00061372 /* ActionViewController.swift */; };
-		172E100D2735B83E00061372 /* ActionExtension-iOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 172E0FFF2735B83E00061372 /* ActionExtension-iOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		172E100D2735B83E00061372 /* ActionExtension-iOS.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 172E0FFF2735B83E00061372 /* ActionExtension-iOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		172E10132735BB6200061372 /* Action.js in Resources */ = {isa = PBXBuildFile; fileRef = 172E10122735BB6200061372 /* Action.js */; };
 		172E10152735C2BD00061372 /* UIHostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E10142735C2BD00061372 /* UIHostingView.swift */; };
 		172E10172735C2DF00061372 /* EnvironmentValues+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E10162735C2DF00061372 /* EnvironmentValues+Extensions.swift */; };
@@ -167,15 +167,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		172E100E2735B83E00061372 /* Embed App Extensions */ = {
+		172E100E2735B83E00061372 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				172E100D2735B83E00061372 /* ActionExtension-iOS.appex in Embed App Extensions */,
+				172E100D2735B83E00061372 /* ActionExtension-iOS.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -664,7 +664,7 @@
 				17DF328524C87D3500BCE2E3 /* Frameworks */,
 				17DF328624C87D3500BCE2E3 /* Resources */,
 				17DF32C424C87E6700BCE2E3 /* ShellScript */,
-				172E100E2735B83E00061372 /* Embed App Extensions */,
+				172E100E2735B83E00061372 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -745,8 +745,9 @@
 		17DF327C24C87D3300BCE2E3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					172E0FFE2735B83E00061372 = {
 						CreatedOnToolsVersion = 13.1;
@@ -1150,6 +1151,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1209,6 +1211,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1290,11 +1293,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 708;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = JCH5W6VSL6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = WriteFreely;
+				INFOPLIST_KEY_CFBundleDisplayName = "WriteFreely Beta";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1319,11 +1323,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 708;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = JCH5W6VSL6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = WriteFreely;
+				INFOPLIST_KEY_CFBundleDisplayName = "WriteFreely Beta";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1390,6 +1395,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 702;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = TPPAB4YBA6;
 				INFOPLIST_FILE = "Tests macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1413,6 +1419,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 702;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = TPPAB4YBA6;
 				INFOPLIST_FILE = "Tests macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
